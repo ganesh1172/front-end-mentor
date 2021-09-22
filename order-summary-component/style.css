@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body{
+    width: 100vw;
+    background: #E0E8FF url('./images/pattern-background-desktop.svg') no-repeat top;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card{
+    border-radius: 10px;
+    max-width: 25rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container header img{
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: block;
+}
+
+.container .content{
+    padding: 1.5rem;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+
+.content .content__subtitle{
+    color: #99A3A4;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.content .plans{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: hsl(225, 100%, 98%);
+}
+
+.plans .plan__box{
+    display: flex;
+    align-items: center;
+}
+
+.plan__text{
+    margin: 0 1rem;
+    font-weight: 700;
+}
+
+.plan__subtext{
+    display: block;
+    color: #99A3A4;
+}
+
+.plans a:hover{
+    text-decoration: none;
+}
+
+.btn{
+    width: 100%;
+    padding: 1.1rem 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    cursor: pointer;
+}
+
+.btn--blue{
+    background-color: hsl(245, 75%, 52%);
+    color: #ffffff;
+    box-shadow: 0 4px 8px 0 hsl(224, 62%, 56%)
+}
+
+.btn--blue:hover{
+    background-color: hsl(224, 62%, 56%);
+}
+
+.btn--white{
+    background-color: #ffffff;
+    color: #99A3A4;
+    box-shadow: 0 4px 8px 0 hsl(225, 100%, 94%)
+}
+
+.btn--white:hover{
+    color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+      margin: 0 1rem;
+    }
+  }
