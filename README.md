@@ -1,9 +1,7 @@
 ## Beginner level layouts
 
-<ul>
+### [Order Summary Component](https://ordsumcomp.netlify.app/)
 
-- Order Summary Component :- [this](https://ord-sum-comp.netlify.app/)</li>
-- Stats Preview Card Component :- [this](https://stats-prev-comp.netlify.app/)</li>
-- Social Proof Section Component :- [this](https://soci-prof-comp.netlify.app/)</li>
+### [Stats Preview Card Component](https//tats-prev-comp.netlify.app/)
 
-</ul>
+### [Social Proof Section Component](htp://soci-prof-comp.netlify.app/)
