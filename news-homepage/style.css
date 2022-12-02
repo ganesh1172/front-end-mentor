@@ -4,3 +4,12 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
+:root {
+  --SOFTORANGE: hsl(35, 77%, 62%);
+  --SOFTRED: hsl(5, 85%, 63%);
+  --OFFWHITE: hsl(36, 100%, 99%);
+  --GREYISHBLUE: hsl(233, 8%, 79%);
+  --DARKGREYISHBLUE: hsl(236, 13%, 42%);
+  --DARKBLUE: hsl(240, 100%, 5%);
+}
