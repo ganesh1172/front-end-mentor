@@ -18,9 +18,62 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 1rem 0 1rem;
 }
+
+.nav-list {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  top: 75px;
+  left: 0;
+  background-color: #fff;
+  float: right;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.nav-list li {
+  opacity: 0;
+  line-height: 30px;
+  margin: 10px 0;
+  transition: all 0.5s;
+  color: var(--DARKBLUE);
+  display: none;
+}
+
+.nav-list li a {
+  color: var(--DARKBLUE);
+  font-size: 1.2rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-list li a:hover {
+  color: var(--SOFTRED);
+  transition: 0.5s;
+  scale: 0.2;
+}
+
+.humberger-btn {
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .nav-list {
+  height: 100vh;
+}
+
+#check:checked ~ .nav-list li {
+  opacity: 1;
+  display: block;
+}
+
 .container {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 .outer {
   /* background-color: var(--SOFTORANGE); */
@@ -83,7 +136,14 @@
 }
 
 .right-side .new-card .new-title {
+  font-size: 1.3rem;
+  font-weight: 700;
   margin: 0.5rem 0;
+}
+
+.right-side .new-card .new-title:hover {
+  color: var(--SOFTORANGE);
+  cursor: pointer;
 }
 
 .right-side .new-card .new-subtitle {
@@ -91,9 +151,10 @@
   font-weight: 300;
   line-height: 1.5;
 }
-.right-side hr {
-  border: 1px solid #fff;
+.right-side .hr-line {
+  width: 100%;
   height: 1px;
+  background-color: #fff;
 }
 
 .top-new {
@@ -159,6 +220,30 @@ footer {
 }
 
 @media only screen and (max-width: 1920px) and (min-width: 872px) {
+  .header {
+    padding: 1rem 1rem 0 1rem;
+    align-items: flex-start;
+  }
+
+  .humberger-btn {
+    display: none;
+  }
+
+  .nav-list {
+    position: relative;
+    top: 0;
+    float: right;
+    background: none;
+    transition: none;
+  }
+
+  .nav-list li {
+    display: inline-block;
+    opacity: 1;
+    margin: 0 20px;
+    transition: none;
+  }
+
   .outer {
     display: flex;
     justify-content: space-between;
@@ -179,7 +264,7 @@ footer {
 
   .content .heading,
   .content .subcontent {
-    width: 49%;
+    width: 40%;
   }
 
   .top-new {
