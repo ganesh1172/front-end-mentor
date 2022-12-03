@@ -1,5 +1,7 @@
 ## Beginner level layouts
 
+#### [New Homepage](https://frontnews-homepage.netlify.app/)
+
 #### [Order Summary Component](https://ord-sum-comp.netlify.app/)
 
 #### [Stats Preview Card Component](https://stats-prev-comp.netlify.app/)

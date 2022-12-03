@@ -185,6 +185,11 @@
   font-size: 1.2rem;
 }
 
+.card-title:hover {
+  color: var(--SOFTRED);
+  cursor: pointer;
+}
+
 .card-para {
   color: rgba(0, 0, 0, 0.6);
   font-size: 0.9rem;
@@ -262,9 +267,11 @@ footer {
     justify-content: space-between;
   }
 
-  .content .heading,
+  .content .heading {
+    width: 30%;
+  }
   .content .subcontent {
-    width: 40%;
+    width: 55%;
   }
 
   .top-new {
