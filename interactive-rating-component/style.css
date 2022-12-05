@@ -13,10 +13,6 @@
   --VeryDarkBlue: hsl(216, 12%, 8%);
 }
 
-.hide {
-  display: none;
-}
-
 body {
   background-color: var(--VeryDarkBlue);
 }
@@ -62,7 +58,7 @@ body {
   justify-content: space-between;
 }
 
-.rate {
+.rate-num {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -75,12 +71,12 @@ body {
   font-size: 1rem;
 }
 
-.rate:hover {
+.rate-num:hover {
   background-color: var(--MediumGrey);
   color: #fff;
 }
 
-.rate.selected {
+.rate-num.selected {
   background-color: var(--Orange);
   color: #fff;
 }
@@ -93,19 +89,20 @@ body {
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 1px;
-  background-color: var(--VeryDarkBlue);
-  color: var(--LightGrey);
   border: none;
   border-radius: 30px;
-}
-
-.btn-submit.selected {
   cursor: pointer;
   background-color: #fff;
   color: var(--Orange);
 }
 
+.btn-submit:disabled {
+  background-color: var(--VeryDarkBlue);
+  color: var(--LightGrey);
+}
+
 .card.card-result {
+  display: none;
   text-align: center;
 }
 
@@ -114,7 +111,7 @@ body {
   display: block;
 }
 
-.rate-result {
+.rate-output {
   padding: 0.5rem 1rem;
   text-align: center;
   color: var(--Orange);
@@ -123,8 +120,20 @@ body {
   border-radius: 30px;
   background-color: var(--VeryDarkBlue);
   font-size: 0.9rem;
+  position: relative;
 }
 
+.rate-output .btn-edit {
+  width: 180px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: text;
+}
 .card-result h1 {
   color: #fff;
 }

@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
-
+    <script src="https://kit.fontawesome.com/60f7d5e064.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
     <title>Interactive Rating Component</title>
@@ -21,20 +21,58 @@
       <h2 class="card-title">How did we do?</h2>
       <p class="card-para">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
       <div class="rating-level">
-        <button class="rate">1</button>
-        <button class="rate">2</button>
-        <button class="rate">3</button>
-        <button class="rate">4</button>
-        <button class="rate">5</button>
+        <button class="rate-num">1</button>
+        <button class="rate-num">2</button>
+        <button class="rate-num">3</button>
+        <button class="rate-num">4</button>
+        <button class="rate-num">5</button>
       </div>
-      <button class="btn-submit">Submit</button>
+      <button class="btn-submit" onclick="submitResult()" disabled>Submit</button>
     </div>
     <div class="card card-result">
       <img src="./images/illustration-thank-you.svg" alt="Result Image" class="result-img" />
-      <div class="rate-result"><p>You selected 4 out of 5</p></div>
+      <div class="rate-output">
+        <p class="rate-text">You selected 4 out of 5</p>
+        <button class="btn-edit" onclick="editResult()"></button>
+      </div>
       <h1>Thank you!</h1>
       <p class="result-para">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
       <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
     </div>
   </body>
+
+  <script>
+    const allStars = document.querySelectorAll(".rate-num");
+    const submitBtn = document.querySelector(".btn-submit");
+    const inputCard = document.querySelector(".card");
+    const resultCard = document.querySelector(".card-result");
+    const ratingOutput = document.querySelector(".rate-text");
+    const editRating = document.querySelector(".btn-edit");
+
+    allStars.forEach((star, i) => {
+      star.onclick = function () {
+        let currentStar = i + 1;
+        submitBtn.disabled = false;
+        allStars.forEach((star, j) => {
+          currentStar >= j + 1 ? star.classList.add("selected") : star.classList.remove("selected");
+        });
+        ratingOutput.innerHTML = `You selected ${currentStar} out of ${allStars.length}`;
+      };
+    });
+
+    function submitResult() {
+      inputCard.style.display = "none";
+      showResult();
+    }
+
+    function showResult() {
+      resultCard.style.display = "block";
+    }
+
+    function editResult() {
+      console.log("editing");
+      inputCard.style.display = "block";
+      resultCard.style.display = "none";
+    }
+  </script>
 </html>
