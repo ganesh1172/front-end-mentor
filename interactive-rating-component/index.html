@@ -37,42 +37,8 @@
       </div>
       <h1>Thank you!</h1>
       <p class="result-para">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
-      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
+      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Ganesh Bardade</a>.</div>
     </div>
   </body>
-
-  <script>
-    const allStars = document.querySelectorAll(".rate-num");
-    const submitBtn = document.querySelector(".btn-submit");
-    const inputCard = document.querySelector(".card");
-    const resultCard = document.querySelector(".card-result");
-    const ratingOutput = document.querySelector(".rate-text");
-    const editRating = document.querySelector(".btn-edit");
-
-    allStars.forEach((star, i) => {
-      star.onclick = function () {
-        let currentStar = i + 1;
-        submitBtn.disabled = false;
-        allStars.forEach((star, j) => {
-          currentStar >= j + 1 ? star.classList.add("selected") : star.classList.remove("selected");
-        });
-        ratingOutput.innerHTML = `You selected ${currentStar} out of ${allStars.length}`;
-      };
-    });
-
-    function submitResult() {
-      inputCard.style.display = "none";
-      showResult();
-    }
-
-    function showResult() {
-      resultCard.style.display = "block";
-    }
-
-    function editResult() {
-      console.log("editing");
-      inputCard.style.display = "block";
-      resultCard.style.display = "none";
-    }
-  </script>
+  <script src="./script.js"></script>
 </html>
