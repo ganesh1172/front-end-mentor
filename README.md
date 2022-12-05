@@ -1,5 +1,7 @@
 ## Beginner level layouts
 
+#### [Interactive Rating Component](https://interactive-number-rate-component.netlify.app/)
+
 #### [New Homepage](https://frontnews-homepage.netlify.app/)
 
 #### [Order Summary Component](https://ord-sum-comp.netlify.app/)
