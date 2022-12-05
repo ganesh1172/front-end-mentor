@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(216, 12%, 54%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background-color: var(--VeryDarkBlue);
+}
+
+.card {
+  margin: 0 auto;
+  max-width: 380px;
+  background-color: var(--DarkBlue);
+  border-radius: 15px;
+  position: relative;
+  padding: 1.8rem;
+}
+
+.card .cricle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--VeryDarkBlue);
+  position: relative;
+}
+
+.card .cricle .star-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0.8rem 0;
+}
+
+.card-para {
+  font-size: 0.9rem;
+  color: var(--LightGrey);
+}
+
+.rating-level {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--VeryDarkBlue);
+  color: var(--LightGrey);
+  margin: 1.5rem 0;
+  padding: 1rem 1.3rem;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.rate:hover {
+  background-color: var(--MediumGrey);
+  color: #fff;
+}
+
+.rate.selected {
+  background-color: var(--Orange);
+  color: #fff;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  background-color: var(--VeryDarkBlue);
+  color: var(--LightGrey);
+  border: none;
+  border-radius: 30px;
+}
+
+.btn-submit.selected {
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--Orange);
+}
+
+.card.card-result {
+  text-align: center;
+}
+
+.result-img {
+  margin: 0 auto;
+  display: block;
+}
+
+.rate-result {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: var(--Orange);
+  width: fit-content;
+  margin: 2rem auto;
+  border-radius: 30px;
+  background-color: var(--VeryDarkBlue);
+  font-size: 0.9rem;
+}
+
+.card-result h1 {
+  color: #fff;
+}
+
+.card-result .result-para {
+  color: var(--LightGrey);
+  font-size: 0.9rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--LightGrey);
+}
+.attribution a {
+  color: var(--Orange);
+}
