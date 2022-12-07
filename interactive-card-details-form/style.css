@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+:root {
+  --INPUTBORDER: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --INPUTERROR: hsl(0, 100%, 66%);
+  --LIGHTVIOLET: hsl(270, 3%, 87%);
+  --DARKVIOLET: hsl(279, 6%, 55%);
+  --VDARKVIOLET: hsl(278, 68%, 11%);
+}
+
+.bg-main {
+  width: 375px;
+  height: 240px;
+  background: url("./images/bg-main-mobile.png") no-repeat 0 0 transparent;
+  position: relative;
+}
+
+.card-back {
+  width: 447px;
+  height: 245px;
+  background: url("./images/bg-card-back.png") no-repeat 0 0 transparent;
+}
+
+.card-back {
+  width: 447px;
+  height: 245px;
+  background: url("./images/bg-card-front.png") no-repeat 0 0 transparent;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
