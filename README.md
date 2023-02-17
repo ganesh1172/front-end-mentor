@@ -1,4 +1,14 @@
-## Beginner level layouts
+# Frontend Mentor Challenge Solutions
+
+Welcome to my repository containing my solutions to various Frontend Mentor challenges. Each challenge folder contains my implementation of the design provided by Frontend Mentor, along with the necessary HTML, CSS, and JavaScript files.
+
+I used modern web development tools and techniques to create responsive, accessible, and high-quality user interfaces. Additionally, I included comments throughout the code to explain my thought process and implementation details.
+
+Please feel free to explore my solutions, leave feedback, and use them as a reference for your own projects. Thank you for visiting my repository!
+
+## Demo
+
+### Beginner level layouts
 
 #### [Advice Generator App](https://advice-generator-quotes.netlify.app/)
 
