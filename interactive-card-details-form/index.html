@@ -14,41 +14,65 @@
   <body>
     <div class="bg-main bg-main__desktop">
       <div class="card-back">
-        <p class="card-key">123</p>
+        <img src="./images/bg-card-back.png" alt="Back Image" class="card-img" loading="lazy" />
+        <p class="card-key">000</p>
       </div>
       <div class="card-front">
-        <div class="fill-circle"></div>
-        <div class="emtpy-circle"></div>
-        <h2 class="card-number">9591 6489 6389 1011</h2>
+        <img src="./images/bg-card-front.png" alt="Front Image" class="card-img" loading="lazy" />
+
+        <div class="circles">
+          <span class="fill-circle"></span>
+          <span class="emtpy-circle"></span>
+        </div>
+        <p class="card-number">**** **** **** ****</p>
         <div class="card-details">
           <p class="card-name">Felicia leire</p>
-          <p class="card-date">09/26</p>
+          <p class="card-date"><span class="c-month">09</span>/<span class="c-year">26</span></p>
         </div>
       </div>
     </div>
     <div class="form-container">
-      <form method="post">
+      <form method="get" id="my-form">
         <label for="username">Cardholder name</label>
-        <input type="text" name="" id="username" placeholder="e.g. jane Appleseed" />
+        <input type="text" name="" id="username" placeholder="e.g. jane Appleseed" required />
         <label for="cardnumber">Card number</label>
-        <input type="number" name="" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" />
+        <input type="number" name="" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" required />
         <div class="date-info">
           <div class="date">
             <label for="date">Exp. date (mm/yy)</label>
-            <input type="number" name="" id="cardmonth" placeholder="MM" />
-            <input type="number" name="" id="cardyear" placeholder="YY" />
+            <div class="date-input">
+              <input type="number" name="" id="cardmonth" placeholder="MM" required />
+              <input type="number" name="" id="cardyear" placeholder="YY" required />
+            </div>
           </div>
           <div class="secret-key">
             <label for="key">Cvc</label>
-            <input type="number" name="" id="key" placeholder="e.g. 123" />
+            <input type="number" name="" id="key" placeholder="e.g. 123" required />
           </div>
         </div>
-        <input type="button" value="Confirm" />
+        <input type="submit" onclick="showOutput()" class="btn btn-submit" value="Confirm" />
       </form>
+      <div class="show-output">
+        <img src="./images/icon-complete.svg" alt="Complete" />
+        <p class="thanks-text">Thank you!</p>
+        <p class="subtext">We've added your card details</p>
+        <input type="submit" onclick="resetForm()" class="btn btn-continue" value="Continue" />
+      </div>
     </div>
 
     <!-- Thank you! We've added your card details Continue -->
 
     <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Ganesh Bardade</a>.</div>
+    <script>
+      const userName = document.getElementById("username");
+      const cardNumber = document.getElementById("cardnumber");
+      const cardMonth = document.getElementById("cardmonth");
+      const cardYear = document.getElementById("cardyear");
+      const key = document.getElementById("key");
+
+      document.querySelector("#username").oninput = () => {
+        document.querySelector(".card-name").innerText = document.querySelector("#username").value;
+      };
+    </script>
   </body>
 </html>

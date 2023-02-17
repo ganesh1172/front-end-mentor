@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practise</title>
-</head>
-
-<body>
     <style>
-        h1 {
-            color: chartreuse;
-        }
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+        margin: 0;
+      }
 
-        .heading {
-            color: crimson;
-        }
+      p {
+        margin: 0.2rem 0;
+        font-size: 1.1em;
+      }
 
+      select {
+        width: 345px;
+        border-radius: 5px;
+        height: 40px;
+        outline: 1px solid;
+      }
+
+      input {
+        width: 300px;
+        height: 35px;
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+        display: none;
+      }
     </style>
-    <h1 id="title">Welcome to JavaScript!</h1>
-    <!-- <ul id="myList">
-        <li>Apple</li>
-    </ul> -->
-    <div id="headings"></div>
-</body>
-<script>
-    let myTitle = document.getElementById('title');
-    myTitle.innerHTML = '<u>Learning basic of DOM</u>';
+  </head>
 
-    // let myList = document.getElementById('myList');
-    // let fruitList = ["Banana", "Orange", "Mango", "Lemon"]
-    // for (let fruit of fruitList) {
-    //     let myListItem = document.createElement('li');
-    //     myListItem.innerText = fruit;
-    //     myList.appendChild(myListItem);
-    // }
+  <body>
+    <p>Select a country</p>
+    <select id="select-list" onclick="showSearch()">
+      <input type="text" placeholder="..." id="filter-country" />
+    </select>
+  </body>
+  <script>
+    let country = ["Goku", "Naruto", "Ichigo", "Flash", "Batman", "Sherlock Holmes", "Khaleesi", "Steve Fox"];
 
-    let myHeading = document.getElementById('headings');
-    let docFrag = document.createDocumentFragment();
-    myHeading.setAttribute('class', 'heading');
-    let head3 = document.createElement('h3');
-    let head4 = document.createElement('h4');
+    let select = document.getElementById("select-list");
+    const input = document.getElementById("filter-country");
 
-    head3.innerText = 'This is Awesome!';
-    head4.innerText = 'This is Wonderful!';
+    function renderList(lists) {
+      let option = "";
+      for (list in lists) {
+        option += "<option>" + lists[list] + "</option>";
+      }
+      select.innerHTML = option;
+    }
+    renderList(country);
 
-    docFrag.appendChild(head3)
-    docFrag.appendChild(head4)
+    // select.addEventListener("keyup", showSearch());
 
-    myHeading.appendChild(docFrag)
-</script>
+    function showSearch() {
+      console.log("search");
+      input.style.display = "block";
+    }
 
+    function filterCountry(event) {
+      let keyword = input.value.toLowerCase();
+      let filteredUsers = country.filter(function (cont) {
+        cont = cont.toLowerCase();
+        return cont.indexOf(keyword) > -1;
+      });
+      renderList(filteredUsers);
+    }
+
+    input.addEventListener("keyup", filterCountry);
+  </script>
 </html>

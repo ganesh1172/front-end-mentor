@@ -22,21 +22,197 @@
 }
 
 .card-back {
-  width: 447px;
-  height: 245px;
-  background: url("./images/bg-card-back.png") no-repeat 0 0 transparent;
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  width: 76%;
 }
 
-.card-back {
-  width: 447px;
-  height: 245px;
-  background: url("./images/bg-card-front.png") no-repeat 0 0 transparent;
+.card-back .card-key {
+  position: absolute;
+  top: 69px;
+  right: 35px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+}
+
+.card-back .card-img,
+.card-front .card-img {
+  width: 100%;
+  box-shadow: 5px 30px 60px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-front {
+  position: absolute;
+  top: 125px;
+  left: 15px;
+  width: 76%;
+}
+
+.circles {
+  display: flex;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  align-items: center;
+}
+
+.circles .fill-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.circles .emtpy-circle {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.card-number {
+  color: #fff;
+  position: absolute;
+  top: 90px;
+  left: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  font-size: 0.7rem;
+}
+
+.card-details {
+  position: absolute;
+  top: 120px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.card-name {
+  max-width: 130px;
+  font-size: 0.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-date span {
+  font-size: 0.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-date {
+  transform: translateX(10px);
+}
+
+.form-container {
+  width: 320px;
+  margin: 5rem auto 1rem;
+  position: relative;
+}
+
+.form-container form {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-container label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  display: block;
+}
+
+.form-container input[type] {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 5px 0 20px;
+  box-sizing: border-box;
+  border: 1px solid var(--LIGHTVIOLET);
+  border-radius: 7px;
+}
+
+::placeholder {
+  font-size: 0.9rem;
+}
+
+.form-container .date-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-info .date .date-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date .date-input input[type="number"] {
+  width: 70px;
+}
+
+.secret-key input[type="number"] {
+  width: 150px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: var(--VDARKVIOLET);
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+}
+
+.show-output {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.show-output img {
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.show-output .thanks-text {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.show-output .subtext {
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--DARKVIOLET);
 }
 
 .attribution {
-  font-size: 11px;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 0.8rem;
   text-align: center;
+  font-weight: 500;
 }
 .attribution a {
+  font-size: 0.8rem;
   color: hsl(228, 45%, 44%);
 }
