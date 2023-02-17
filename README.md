@@ -1,5 +1,7 @@
 ## Beginner level layouts
 
+#### [Advice Generator App](https://interactive-number-rate-component.netlify.app/)
+
 #### [Interactive Rating Component](https://interactive-number-rate-component.netlify.app/)
 
 #### [New Homepage](https://frontnews-homepage.netlify.app/)

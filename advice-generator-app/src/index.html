@@ -4,36 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get personalized and insightful advice anytime, anywhere with our Advice Generator App." />
+    <meta name="keywords" content="Advice Generator App, personalized advice" />
+    <meta name="robots" content="index,follow" />
+    <meta name="language" content="English" />
+    <meta name="title" content="Advice Generator App" />
     <link href="./style/output.css" rel="stylesheet" />
     <link href="./images/favicon-32x32.png" rel="icon" />
+
     <title>Advice Generator App</title>
   </head>
   <body class="bg-dark-blue">
     <section class="grid h-screen place-items-center">
-      <div class="container grid place-items-center relative lg:w-1/4 md:w-1/2 w-auto p-8 rounded-lg bg-dark-grayish-blue">
-        <h6 class="advice-uid text-xs text-neon-green leading-loose">ADVICE #117</h6>
-        <h3 class="advice-text w-auto h-16 text-white text-xl my-8 text-center font-bold">"It is easy to sit up and take notice, what's difficult is getting up and taking action."</h3>
+      <div class="container grid place-items-center relative w-80 lg:w-1/5 p-8 rounded-lg bg-dark-grayish-blue">
+        <h6 class="advice-uid text-xs text-neon-green tracking-widest">ADVICE #117</h6>
+        <h3 class="advice-text text-white text-xl my-8 text-center font-bold">"It is easy to sit up and take notice, what's difficult is getting up and taking action."</h3>
         <img src="./images/pattern-divider-mobile.png" alt="Horizontal line" class="w-auto h-6 mb-4" />
-        <button id="btn" onclick="fetchData()" class="w-12 h-12 p-1 grid place-items-center absolute -bottom-6 rounded-full bg-neon-green hover:shadow-green-400 hover:shadow-md">
-          <img src="./images/icon-dice.png" alt="Dice Image" class="w-5 h-5" />
+        <button
+          id="btn"
+          onclick="fetchData()"
+          class="w-14 h-14 p-1 grid place-items-center absolute -bottom-6 rounded-full bg-neon-green hover:shadow-green-400 hover:shadow-[0px_0px_15px_1px_rgba(0,0,0,0.56)]"
+        >
+          <img src="./images/icon-dice.png" alt="Dice Image" class="w-1/2 h-1/2" />
         </button>
       </div>
     </section>
-    <script>
-      const btn = document.getElementById("btn");
-      const uId = document.querySelector(".advice-uid");
-      const adText = document.querySelector(".advice-text");
-
-      function fetchData() {
-        fetch("https://api.adviceslip.com/advice")
-          .then((response) => response.json())
-          .then((data) => {
-            let advices = data.slip;
-
-            uId.innerHTML = `ADVICE #${advices.id}`;
-            adText.innerHTML = `${advices.advice}`;
-          });
-      }
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

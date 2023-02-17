@@ -9,3 +9,20 @@
     font-family: "Manrope", sans-serif;
   }
 }
+
+@layer utilities {
+  .loading {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+      box-shadow: none;
+    }
+    to {
+      transform: rotate(360deg);
+      box-shadow: none;
+    }
+  }
+}
