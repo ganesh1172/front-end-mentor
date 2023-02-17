@@ -1,6 +1,6 @@
 ## Beginner level layouts
 
-#### [Advice Generator App](https://interactive-number-rate-component.netlify.app/)
+#### [Advice Generator App](https://advice-generator-quotes.netlify.app/)
 
 #### [Interactive Rating Component](https://interactive-number-rate-component.netlify.app/)
 
