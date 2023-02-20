@@ -10,6 +10,8 @@ Please feel free to explore my solutions, leave feedback, and use them as a refe
 
 ### Beginner level layouts
 
+#### [Results Summary Component](https://advice-generator-quotes.netlify.app/)
+
 #### [Advice Generator App](https://advice-generator-quotes.netlify.app/)
 
 #### [Interactive Rating Component](https://interactive-number-rate-component.netlify.app/)
