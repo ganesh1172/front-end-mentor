@@ -23,37 +23,153 @@ body {
   background-color: hsl(0, 0%, 100%);
 }
 
+ul li {
+  list-style: none;
+}
+
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
+  color: #fff;
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .container {
-  margin: 0 auto;
-  width: 100%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-cont {
+  margin: 0 1rem;
+  position: relative;
 }
 
 .card {
-  max-width: 350px;
-  width: 100%;
+  max-width: 18rem;
 }
 
 .card.card-left {
   border-radius: 30px;
-  background-color: var(--LIGHTROYALBLUE);
+  background: rgb(100, 65, 253);
+  background: linear-gradient(180deg, rgba(100, 65, 253, 1) 23%, rgba(57, 48, 237, 1) 38%);
   text-align: center;
+  padding: 1.5rem;
+  color: #cfbeff;
+  width: 100%;
+}
+
+.circle {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: rgb(73, 37, 207);
+  background: linear-gradient(180deg, rgba(73, 37, 207, 1) 55%, rgba(70, 51, 237, 1) 90%);
+  margin: 1.3rem auto;
   padding: 2.5rem;
+}
+
+.card.card.card-left h2 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.card.card-right {
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.7rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+
+.block .left-side {
+  display: flex;
+}
+
+.block .left-side .img {
+  margin-right: 0.5rem;
+}
+
+.block.light-red {
+  background-color: #fff6f5;
+  color: var(--LIGHTRED);
+}
+
+.block.light-orange {
+  background-color: #fffbf2;
+  color: var(--ORANGEYELLOW);
+}
+
+.block.light-green {
+  background-color: #f2fbfa;
+  color: var(--GREENTEAL);
+}
+
+.block.light-blue {
+  background-color: #f3f3fd;
+  color: var(--COBALTBLUE);
+}
+
+.right-side h4 {
+  color: #000;
+  font-weight: 700;
+}
+
+.right-side h4 span {
+  color: #aaa5ac;
+}
+
+.btn {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  background-color: var(--COBALTBLUE);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: hsl(224, 30%, 27%);
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card-cont {
+    display: flex;
+    max-width: 36rem;
+    width: 100%;
+    border-radius: 0 30px 30px 0;
+    box-shadow: 11px 20px 23px -7px #e7edfe;
+  }
+
+  .card.card-left {
+    padding: 2.5rem;
+  }
 }
