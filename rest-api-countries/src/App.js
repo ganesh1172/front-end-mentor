@@ -1,15 +1,15 @@
 import CountryFilters from "./components/CountryFilters";
 import CountryLists from "./components/CountryLists";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div className="App">
-      <nav>
-        <h3>Where in the world?</h3>
-        <h5>Dark Mode</h5>
-      </nav>
-      <CountryFilters />
-      <CountryLists />
+    <div className="bg-DARKEBONYCLAY">
+      <div className="w-full">
+        <NavBar />
+        <CountryFilters />
+        <CountryLists />
+      </div>
     </div>
   );
 }
