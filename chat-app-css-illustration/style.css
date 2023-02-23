@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+:root {
+  --PALEVIOLET: hsl(276, 100%, 81%);
+  --MODERATEVIOLET: hsl(276, 55%, 52%);
+  --DARKVIOLET: hsl(271, 15%, 43%);
+  --GRAYISHBLUE: hsl(206, 6%, 79%);
+  --VERYDARKVIOLET: hsl(271, 36%, 24%);
+  --DARKGRAYISHVIOLET: hsl(270, 7%, 64%);
+  --LEFTBGBOX: hsl(293, 100%, 63%);
+  --RIGHTBGBOX: hsl(264, 100%, 61%);
+  --APPBG: hsl(270, 20%, 96%);
+}
+
+.container {
+  position: relative;
+}
+
+.content {
+  margin: 2.5rem;
+}
+
+.mobile-outer {
+  max-width: 350px;
+  width: 100%;
+  height: 500px;
+  background-color: var(--DARKVIOLET);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.chat-container {
+  width: 90%;
+  height: 90%;
+  margin: 1rem auto;
+  background-color: var(--APPBG);
+  border-radius: 20px;
+}
+
+.chat-profile {
+  width: 100%;
+  padding: 1rem;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-info .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.profile-img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.content .about-app {
+  text-align: center;
+}
+
+.about-app .about-title {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--VERYDARKVIOLET);
+  margin: 1.5rem 0;
+}
+
+.about-app .about-para {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: var(--DARKGRAYISHVIOLET);
+}
+
+/* .rounded-box {
+  max-width: 20rem;
+  width: 100%;
+  height: 20rem;
+  border-radius: 30px;
+  position: absolute;
+}
+
+.rounded-box.left-svg {
+  background-color: var(--MODERATEVIOLET);
+  left: -5rem;
+  top: -2rem;
+}
+
+.rounded-box.right-svg {
+  background-color: var(--GRAYISHBLUE);
+  transform: translate(80%, 50%);
+} */
