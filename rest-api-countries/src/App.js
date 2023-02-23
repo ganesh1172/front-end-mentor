@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <div className="bg-DARKEBONYCLAY">
-      <div className="w-full">
+      <div className="w-full min-h-screen">
         <NavBar />
         <CountryFilters />
         <CountryLists />
