@@ -21,35 +21,37 @@
 
 .container {
   position: relative;
+  height: 100vh;
 }
 
 .content {
-  margin: 2.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column;
 }
 
 .mobile-outer {
-  max-width: 375px;
+  max-width: 350px;
   width: 100%;
-  height: 812px;
-  background-color: var(--DARKVIOLET);
-  border-radius: 38.5px;
-  margin: 0 auto;
-  padding: 1rem 0;
+  min-height: 635px;
+  border: 12px solid #fff;
+  border-radius: 50px;
+  box-shadow: 5px 25px 27px -8px #ebe9ee;
 }
 
 .chat-container {
-  width: 90%;
-  height: 100%;
+  width: auto;
+  height: auto;
   margin: 0 auto;
   background-color: var(--APPBG);
-  border-radius: 38.5px;
+  border-radius: 40px;
 }
 
 .chat-profile {
   width: 100%;
   padding: 1rem;
   position: relative;
-  border-radius: 20px 20px 10px 10px;
+  border-radius: 40px 40px 10px 10px;
   background: rgb(151, 59, 254);
   background: linear-gradient(90deg, rgba(151, 59, 254, 1) 42%, rgba(213, 67, 255, 1) 92%);
 }
@@ -57,7 +59,7 @@
 .mobile-notch {
   width: 180px;
   height: 25px;
-  border-radius: 3px 3px 20px 20px;
+  border-radius: 2px 2px 20px 20px;
   background-color: #fff;
   position: absolute;
   margin: 0 auto;
@@ -99,27 +101,28 @@
 }
 
 .chat-section {
-  padding: 1rem;
+  padding: 0.7rem;
 }
 
 .chat-body {
-  width: 250px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  max-width: 250px;
+  width: 80%;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
 }
 
 .chat-body.receiver {
   background-color: #ede5f3;
   color: #d181ff;
-  border-radius: 25px 25px 25px 2px;
+  border-radius: 15px 15px 15px 1px;
   box-shadow: -7px 10px 19px -3px #f7f3fa;
 }
 
 .chat-body.sender {
   background-color: #fff;
   color: #7c7982;
-  border-radius: 25px 25px 2px 25px;
-  transform: translateX(55px);
+  border-radius: 15px 15px 1px 15px;
+  margin-left: auto;
   box-shadow: 10px 10px 19px -3px #ebe9ee;
 }
 
@@ -127,8 +130,82 @@
   font-size: 0.9rem;
 }
 
+.pics {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.pics img {
+  width: 72px;
+  padding: 5px 7px;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+.price-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 250px;
+  width: 90%;
+  padding: 1rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  background: rgb(213, 67, 255);
+  background: linear-gradient(90deg, rgba(213, 67, 255, 1) 24%, rgba(211, 67, 255, 1) 26%, rgba(151, 59, 254, 1) 54%);
+  border-radius: 20px 20px 20px 2px;
+  box-shadow: 10px 10px 19px -3px #ebe9ee;
+}
+
+.price-tab .distance {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.distance .loading {
+  width: 20px;
+  height: auto;
+  mix-blend-mode: darken;
+}
+
 .content .about-app {
   text-align: center;
+}
+
+.msg-box {
+  position: relative;
+}
+.msg-input {
+  width: 100%;
+  height: auto;
+  padding: 1.2rem;
+  border-radius: 50px;
+  border: none;
+  outline: 1px solid #d181ff;
+}
+
+.msg-submit {
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-color: #452c59;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.msg-submit:hover {
+  background-color: #d181ff;
+  color: #452c59;
+  cursor: pointer;
+}
+
+.msg-submit img {
+  transform: scale(-1);
 }
 
 .about-app .about-title {
@@ -144,4 +221,59 @@
   color: var(--DARKGRAYISHVIOLET);
   max-width: 450px;
   width: 100%;
+}
+
+.rounded-box {
+  max-width: 600px;
+  max-height: 770px;
+  width: 50%;
+  height: 60%;
+  position: absolute;
+  z-index: -1;
+}
+.rounded-box.left-svg {
+  background: rgb(151, 59, 254);
+  background: linear-gradient(90deg, rgba(151, 59, 254, 1) 42%, rgba(213, 67, 255, 1) 92%);
+  left: 0;
+  top: 0;
+  border-radius: 0 0 60% 0;
+}
+.rounded-box.right-svg {
+  background-color: #f7f5fa;
+  right: 0;
+  bottom: 0;
+  border-radius: 60% 0 0 0;
+}
+
+@media screen and (min-width: 800px) {
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    gap: 10%;
+  }
+
+  .chat-body {
+    width: 100%;
+  }
+
+  .price-tab {
+    width: 100%;
+  }
+
+  .content .about-app {
+    text-align: left;
+  }
+
+  .rounded-box {
+    width: 100%;
+    height: 100%;
+  }
+  .rounded-box.left-svg {
+    border-radius: 0 0 50% 50%;
+  }
+  .rounded-box.right-svg {
+    border-radius: 50% 50% 0 0;
+  }
 }
