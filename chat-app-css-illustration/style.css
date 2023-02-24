@@ -16,7 +16,7 @@
   --DARKGRAYISHVIOLET: hsl(270, 7%, 64%);
   --LEFTBGBOX: hsl(293, 100%, 63%);
   --RIGHTBGBOX: hsl(264, 100%, 61%);
-  --APPBG: hsl(270, 20%, 96%);
+  --APPBG: #f5f3f8;
 }
 
 .container {
@@ -28,45 +28,103 @@
 }
 
 .mobile-outer {
-  max-width: 350px;
+  max-width: 375px;
   width: 100%;
-  height: 500px;
+  height: 812px;
   background-color: var(--DARKVIOLET);
-  border-radius: 20px;
+  border-radius: 38.5px;
   margin: 0 auto;
+  padding: 1rem 0;
 }
 
 .chat-container {
   width: 90%;
-  height: 90%;
-  margin: 1rem auto;
+  height: 100%;
+  margin: 0 auto;
   background-color: var(--APPBG);
-  border-radius: 20px;
+  border-radius: 38.5px;
 }
 
 .chat-profile {
   width: 100%;
   padding: 1rem;
+  position: relative;
+  border-radius: 20px 20px 10px 10px;
+  background: rgb(151, 59, 254);
+  background: linear-gradient(90deg, rgba(151, 59, 254, 1) 42%, rgba(213, 67, 255, 1) 92%);
+}
+
+.mobile-notch {
+  width: 180px;
+  height: 25px;
+  border-radius: 3px 3px 20px 20px;
+  background-color: #fff;
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .profile-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
+  color: #fff;
 }
 
 .profile-info .left {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
+  /* gap: 5px; */
 }
 
 .profile-img {
-  width: 50px;
+  width: 40px;
   height: auto;
   border-radius: 50%;
   border: 1px solid;
+  margin-right: 10px;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.status {
+  color: #d181ff;
+  font-weight: 500;
+}
+
+.chat-section {
+  padding: 1rem;
+}
+
+.chat-body {
+  width: 250px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chat-body.receiver {
+  background-color: #ede5f3;
+  color: #d181ff;
+  border-radius: 25px 25px 25px 2px;
+  box-shadow: -7px 10px 19px -3px #f7f3fa;
+}
+
+.chat-body.sender {
+  background-color: #fff;
+  color: #7c7982;
+  border-radius: 25px 25px 2px 25px;
+  transform: translateX(55px);
+  box-shadow: 10px 10px 19px -3px #ebe9ee;
+}
+
+.chat-body .text {
+  font-size: 0.9rem;
 }
 
 .content .about-app {
@@ -84,23 +142,6 @@
   font-size: 1.1rem;
   line-height: 1.4;
   color: var(--DARKGRAYISHVIOLET);
-}
-
-/* .rounded-box {
-  max-width: 20rem;
+  max-width: 450px;
   width: 100%;
-  height: 20rem;
-  border-radius: 30px;
-  position: absolute;
 }
-
-.rounded-box.left-svg {
-  background-color: var(--MODERATEVIOLET);
-  left: -5rem;
-  top: -2rem;
-}
-
-.rounded-box.right-svg {
-  background-color: var(--GRAYISHBLUE);
-  transform: translate(80%, 50%);
-} */
