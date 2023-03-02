@@ -79,7 +79,9 @@ body {
   background-color: hsl(10, 79%, 65%);
 }
 
-.graph-amount:hover {
+.graph-amount:hover,
+.graph-amount:active,
+.graph-amount:focus {
   cursor: pointer;
   background-color: hsl(186, 34%, 60%);
 }
