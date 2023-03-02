@@ -119,7 +119,7 @@ body {
   font-weight: bold;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 380px) {
   .graph-block {
     width: 50px;
   }
