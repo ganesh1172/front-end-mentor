@@ -10,7 +10,7 @@ Please feel free to explore my solutions, leave feedback, and use them as a refe
 
 ### Beginner level layouts
 
-#### [Expense Chart Component](https://chat-app-illustrate.netlify.app/)
+#### [Expense Chart Component](https://expense-tracking-component.netlify.app/)
 
 #### [Chat App CSS Illustration](https://chat-app-illustrate.netlify.app/)
 
