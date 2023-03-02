@@ -4,3 +4,121 @@
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
 }
+
+:root {
+  --TEXTCOLOR: #958f8a;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+body {
+  background-color: hsl(27, 66%, 92%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 0.5rem;
+}
+
+.head {
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 15px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.content {
+  background-color: #fffcf7;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.graph {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 200px;
+  transition: 2s ease-in-out;
+}
+
+.graph-block {
+  width: 35px;
+  text-align: center;
+}
+
+.graph-block .hover-txt {
+  display: none;
+  background-color: hsl(25, 47%, 15%);
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.graph-block:hover .hover-txt {
+  display: block;
+}
+
+.graph-amount {
+  border-radius: 10px;
+  height: 100px;
+  width: 100%;
+  background-color: hsl(10, 79%, 65%);
+}
+
+.graph-amount:hover {
+  cursor: pointer;
+  background-color: hsl(186, 34%, 60%);
+}
+
+.graph-text {
+  color: var(--TEXTCOLOR);
+}
+
+.content .bottom {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.content hr {
+  height: 3px;
+  background-color: #ccc;
+  border: none;
+  margin: 1.5rem 0 1rem;
+}
+
+.total p {
+  color: var(--TEXTCOLOR);
+}
+
+.last-month {
+  color: var(--TEXTCOLOR);
+}
+
+.last-month span {
+  display: block;
+  text-align: right;
+  color: #000;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 375px) {
+  .graph-block {
+    width: 50px;
+  }
+}

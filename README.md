@@ -10,6 +10,8 @@ Please feel free to explore my solutions, leave feedback, and use them as a refe
 
 ### Beginner level layouts
 
+#### [Expense Chart Component](https://chat-app-illustrate.netlify.app/)
+
 #### [Chat App CSS Illustration](https://chat-app-illustrate.netlify.app/)
 
 #### [Results Summary Component](https://result-summary-component.netlify.app/)
