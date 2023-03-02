@@ -63,7 +63,7 @@ body {
   padding: 5px;
   border-radius: 5px;
   color: #fff;
-  font-size: 13px;
+  font-size: 9px;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -122,5 +122,9 @@ body {
 @media screen and (min-width: 375px) {
   .graph-block {
     width: 50px;
+  }
+
+  .graph-block .hover-txt {
+    font-size: 13px;
   }
 }
