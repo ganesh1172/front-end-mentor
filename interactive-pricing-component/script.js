@@ -1,31 +1,75 @@
-const graph = document.querySelector(".graph");
-const block = document.createDocumentFragment();
+// let pageViews = document.getElementById("pg-view");
+// let price = document.getElementById("price");
+// let period = document.getElementById("period");
+// let toggle = document.getElementById("toggle");
+// let slider = document.getElementById("slider");
 
-fetch("./data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    let graphData = data;
-    graphData.map((val) => {
-      let graphBlock = document.createElement("div");
-      let hoverText = document.createElement("div");
-      let amount = document.createElement("div");
-      let day = document.createElement("p");
+let slider = document.getElementById("slider");
+let price = document.getElementById("price");
+let pageViews = document.getElementById("count");
 
-      hoverText.innerHTML = `$${val.amount}`;
-      amount.innerHTML = "";
-      day.innerHTML = `${val.day}`;
+let toggle = document.getElementById("toggle");
+let period = document.getElementById("period");
 
-      graphBlock.appendChild(hoverText);
-      graphBlock.appendChild(amount);
-      graphBlock.appendChild(day);
-      block.appendChild(graphBlock);
+const DISCOUNT = 0.25;
 
-      graphBlock.classList.add("graph-block");
-      hoverText.classList.add("hover-txt");
-      amount.classList.add("graph-amount");
-      day.classList.add("graph-text");
+var prices = [4, 8, 16, 24, 32];
 
-      amount.style.height = `${val.amount * 2}px`;
-    });
-    graph.appendChild(block);
+pageViews.innerHTML = "100K";
+
+function discount() {
+  period.innerHTML = "";
+
+  if (toggle.checked) {
+    period.innerHTML = "year";
+    for (let i = 0; i < prices.length; i++) {
+      prices[i] = prices[i] - prices[i] * DISCOUNT;
+    }
+    listener();
+  } else {
+    period.innerHTML = "month";
+    prices = [8, 12, 16, 24, 36];
+    listener();
+  }
+}
+
+var listener = function () {
+  window.requestAnimationFrame(function () {
+    switch (slider.value) {
+      case "1":
+        price.innerHTML = Number(prices[0]).toFixed(2);
+        pageViews.innerHTML = "10K";
+        break;
+      case "2":
+        price.innerHTML = Number(prices[1]).toFixed(2);
+        pageViews.innerHTML = "50K";
+        break;
+      case "3":
+        price.innerHTML = Number(prices[2]).toFixed(2);
+        pageViews.innerHTML = "100K";
+        break;
+      case "4":
+        price.innerHTML = Number(prices[3]).toFixed(2);
+        pageViews.innerHTML = "500K";
+        break;
+      case "5":
+        price.innerHTML = Number(prices[4]).toFixed(2);
+        pageViews.innerHTML = "1M";
+    }
   });
+};
+
+slider.addEventListener("mousedown", function () {
+  listener();
+  slider.addEventListener("mousemove", listener);
+});
+slider.addEventListener("mouseup", function () {
+  slider.removeEventListener("mousemove", listener);
+});
+
+slider.addEventListener("keydown", listener);
+
+slider.oninput = function () {
+  var value = ((this.value - this.min) / (this.max - this.min)) * 100;
+  this.style.background = "linear-gradient(to right, #10d5c2 0%, #10d5c2 " + value + "%, #eaeefb " + value + "%, #eaeefb 100%)";
+};

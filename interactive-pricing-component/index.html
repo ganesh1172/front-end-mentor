@@ -14,27 +14,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet" />
     <link href="./images/favicon-32x32.png" rel="icon" />
     <link rel="stylesheet" href="./style.css" />
-    <!-- <script defer src="./script.js"></script> -->
+    <script defer src="./script.js"></script>
     <title>Interactive Pricing Component</title>
   </head>
   <body>
     <div class="container">
       <header class="top-text">
-        <img src="./images/pattern-circles.svg" alt="Pattern Circle" />
-        <h1>Simple, traffic-based pricing</h1>
+        <h2>Simple, traffic-based pricing</h2>
         <p>Sign-up for our 30-day trial. No credit card required.</p>
       </header>
       <main>
-        <div class="price">
-          <p class="page-views">100k PAGEVIEWS</p>
-        </div>
-        <div class="scrollbar">
-          <img src="./images/icon-slider.svg" alt="slider" />
-        </div>
         <div class="billing">
-          <p>Monthly Billing</p>
-          <!-- <img src="./images/icon-check.svg" alt="Icon check" /> -->
-          <p>yearly Billing <span class="discount">25% discount</span></p>
+          <div class="price">
+            <p class="page-views"><span id="count"></span> PAGEVIEWS</p>
+            <div class="amount">
+              <h1>$<span id="price">16.00</span> / <span class="date" id="period"> month</span></h1>
+            </div>
+          </div>
+
+          <div class="slider">
+            <input type="range" min="1" max="5" value="3" id="slider" />
+          </div>
+
+          <div class="period">
+            <p>Monthly Billing</p>
+            <label class="switch">
+              <input type="checkbox" id="toggle" onclick="discount()" />
+              <span class="slide round"></span>
+            </label>
+            <div>
+              <p>Yearly Billing <span class="discount only-mob">25%</span></p>
+            </div>
+          </div>
         </div>
         <hr />
         <div class="details">
