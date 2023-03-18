@@ -18,6 +18,8 @@ Please feel free to explore my solutions, leave feedback, and use them as a refe
 
 #### [Advice Generator App](https://advice-generator-quotes.netlify.app/)
 
+#### [Interactive Price Component](https://interactive-price-component.netlify.app/)
+
 #### [Interactive Rating Component](https://interactive-number-rate-component.netlify.app/)
 
 #### [New Homepage](https://frontnews-homepage.netlify.app/)
