@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --TEXTCOLOR: #958f8a;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+body {
+  background-color: hsl(0, 0%, 94%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 0.5rem;
+  background-color: hsl(0, 0%, 100%);
+}
