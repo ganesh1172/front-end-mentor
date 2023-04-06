@@ -18,26 +18,57 @@
   </head>
   <body>
     <div class="container">
-      <form onsubmit="generateData()">
+      <form action="" id="generateAge">
         <div class="box">
           <label for="Day">DAY</label>
-          <input type="text" name="day" id="day" />
+          <input type="text" name="day" id="day" placeholder="DD" />
         </div>
         <div class="box">
           <label for="Day">MONTH</label>
-          <input type="text" name="month" id="month" />
+          <input type="text" name="month" id="month" placeholder="MM" />
         </div>
         <div class="box">
           <label for="Day">YEAR</label>
-          <input type="text" name="year" id="year" />
+          <input type="text" name="year" id="year" placeholder="YYYY" />
         </div>
         <input type="submit" />
       </form>
       <main>
-        <h1><span class="aDay">38</span> years</h1>
-        <h1><span class="aMonth">3</span> months</h1>
-        <h1><span class="aYear">26</span> days</h1>
+        <h1><span class="aDay">__</span> years</h1>
+        <h1><span class="aMonth">__</span> months</h1>
+        <h1><span class="aYear">__</span> days</h1>
       </main>
     </div>
+    <script>
+      let formAge = document.getElementById("generateAge");
+      let dDay = document.querySelector(".aDay");
+      let dMonth = document.querySelector(".aMonth");
+      let dYear = document.querySelector(".aYear");
+
+      formAge.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let inputDay = document.getElementById("day").value;
+        let inputMonth = document.getElementById("month").value;
+        let inputYear = document.getElementById("year").value;
+        if (inputDay == "" || inputMonth == "" || inputYear == "") {
+          dDay.innerHTML = "__";
+          dMonth.innerHTML = "__";
+          dYear.innerHTML = "__";
+          alert("Ensure you input a value in both fields!");
+        } else {
+          // perform operation with form input
+          dDay.innerHTML = inputDay;
+          dMonth.innerHTML = inputMonth;
+          dYear.innerHTML = inputYear;
+          // alert("This form has been successfully submitted!");
+          console.log(`This form has a day ${inputDay} month ${inputMonth} year ${inputYear}`);
+        }
+
+        console.log(inputDay);
+        console.log(inputMonth);
+        console.log(inputYear);
+        formAge.reset();
+      });
+    </script>
   </body>
 </html>
