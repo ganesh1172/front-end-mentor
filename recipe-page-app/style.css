@@ -19,14 +19,14 @@ body {
 }
 
 h1 {
-  font-size: 3vmax;
+  font-size: 2.3vmax;
   margin: 1rem 0;
   font-family: var(--YOUNG);
 }
 
 h2 {
   font-family: var(--YOUNG);
-  font-size: 2.5vmax;
+  font-size: 2vmax;
   color: var(--HEADINGCOLOR);
   margin-top: 1rem;
 }
