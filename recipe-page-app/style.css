@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --OUTFIT: "Outfit", sans-serif;
+  --YOUNG: "Young Serif", serif;
+  --HEADINGCOLOR: hsl(332, 51%, 32%);
+  --TEXTCOLOR: #7d7c7a;
+  --BOLDCOLOR: hsl(24, 5%, 18%);
+  --BORDERCOLOR: hsl(30, 18%, 87%);
+}
+
+body {
+  background-color: hsl(330, 100%, 98%);
+}
+
+h1 {
+  font-size: 3vmax;
+  margin: 1rem 0;
+  font-family: var(--YOUNG);
+}
+
+h2 {
+  font-family: var(--YOUNG);
+  font-size: 2.5vmax;
+  color: var(--HEADINGCOLOR);
+  margin-top: 1rem;
+}
+
+ul li,
+ol li {
+  font-family: var(--OUTFIT);
+  margin: 0 0 0.5rem 2.5rem;
+  line-height: 23px;
+  color: var(--TEXTCOLOR);
+}
+
+ul li::marker,
+ol li::marker {
+  color: var(--HEADINGCOLOR);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+table tr td {
+  padding: 0.7rem;
+  border-bottom: 1px solid var(--BORDERCOLOR);
+  font-family: var(--OUTFIT);
+  color: var(--TEXTCOLOR);
+}
+
+.values {
+  font-weight: bold;
+  color: var(--HEADINGCOLOR);
+}
+
+p {
+  font-family: var(--OUTFIT);
+  color: var(--TEXTCOLOR);
+}
+
+.bold {
+  font-weight: bold;
+  color: #595753;
+}
+
+.container {
+  background-color: #fff;
+  width: 100%;
+  max-width: 700px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border-radius: 25px;
+}
+
+.recipe-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 25px;
+}
+
+.prep-time {
+  background-color: hsl(330, 80%, 98%);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  line-height: 30px;
+  font-family: var(--OUTFIT);
+  color: var(--HEADINGCOLOR);
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid var(--BORDERCOLOR);
+}
+
+section .content {
+  margin: 1rem 0;
+}
